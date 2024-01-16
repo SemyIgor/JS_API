@@ -30,9 +30,17 @@ const sportsListInitial = [
 // Делаем копию исходного массива и сохраним её в localStorage
 let sportsList = sportsListInitial.slice(0);
 if (!localStorage.getItem('sportsList')) {
-	saveToStorage(sportsList);
+	saveToStorage('sportsList', sportsList);
 } else {
 	sportsList = JSON.parse(localStorage.getItem('sportsList'));
+}
+
+// Создаём массив для хранения свойства "disabled" кнопок "Записаться"
+let disabledBtns = Array(sportsList.length).fill('');
+if (!localStorage.getItem('disabledBtns')) {
+	saveToStorage('disabledBtns', disabledBtns);
+} else {
+	disabledBtns = JSON.parse(localStorage.getItem('disabledBtns'));
 }
 
 // Находим элемент, через который будем добавлять в DOM наше расписание
@@ -42,13 +50,13 @@ const tableLines = document.querySelector('.table-lines');
 showSchedule();
 
 // Функция сохранения в localStorage расписания
-function saveToStorage(sportsList) {
-	localStorage.setItem('sportsList', JSON.stringify(sportsList));
+function saveToStorage(name, data) {
+	localStorage.setItem(name, JSON.stringify(data));
 }
 
 // Функция вывода в DOM расписания
 function showSchedule() {
-	sportsList.forEach((line) => {
+	sportsList.forEach((line, i) => {
 		tableLines.insertAdjacentHTML(
 			'beforeend',
 			`<div class="table-line">
@@ -58,7 +66,7 @@ function showSchedule() {
                <span class="max-group">${line.maxGroup}</span>
                <span class="on-list">${line.onList}</span>
             </div>
-            <button class="sign-up">Записаться</button>
+            <button class="sign-up" ${disabledBtns[i]}>Записаться</button>
          </div>
       `
 		);
@@ -71,12 +79,16 @@ function showSchedule() {
 	});
 }
 
-// Добавляем участника в выбранную спортивную секцию
+// Функция добавления участника в выбранную спортивную секцию
 function signUp(index) {
 	if (sportsList[index].onList < sportsList[index].maxGroup) {
 		sportsList[index].onList++;
-		tableLines.innerHTML = '';
-		saveToStorage(sportsList);
-		showSchedule();
+		if (sportsList[index].onList === sportsList[index].maxGroup) {
+			disabledBtns[index] = 'disabled';
+		}
 	}
+	tableLines.innerHTML = '';
+	saveToStorage('sportsList', sportsList);
+	saveToStorage('disabledBtns', disabledBtns);
+	showSchedule();
 }
