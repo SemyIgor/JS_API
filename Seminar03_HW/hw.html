@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Расписание занятий</title>
+   <script src="./hw.js" defer></script>
+   <style>
+      body {
+         margin: 0;
+         padding: 0;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+         margin: 0;
+         padding: 0;
+      }
+
+      button {
+         cursor: pointer;
+      }
+
+      span {
+         width: 25%;
+         text-align: center;
+         border: 1px solid grey;
+      }
+
+      .container {
+         padding-top: 20px;
+         padding-bottom: 20px;
+      }
+
+      .title {
+         text-align: center;
+         margin-bottom: 20px;
+
+      }
+
+      .table-line {
+         width: 96vw;
+         display: flex;
+         justify-content: start;
+         padding-left: 10px;
+      }
+
+      .table-items {
+         width: 90%;
+         display: inline-flex;
+         justify-content: space-between;
+      }
+
+      .table-line:first-child .sign-up {
+         visibility: hidden;
+      }
+   </style>
+</head>
+
+<body>
+   <div class="container">
+      <h1 class="title">РАСПИСАНИЕ ЗАНЯТИЙ</h1>
+      <div class="table-lines">
+         <!-- <div class="table-line">
+            <div class="table-items">
+               <span class="sports-name">СЕКЦИЯ</span>
+               <span class="sports-time">ВРЕМЯ ЗАНЯТИЙ</span>
+               <span class="max-group">РАЗМЕР ГРУППЫ</span>
+               <span class="on-list">ЗАПИСАЛИСЬ</span>
+            </div>
+            <button class="sign-up" style="visibility: hidden;">Записаться</button>
+         </div> -->
+      </div>
+   </div>
+</body>
+
+</html>

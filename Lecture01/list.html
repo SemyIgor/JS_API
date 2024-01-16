@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>List</title>
+   <script src="./list.js" defer></script>
+   <style>
+      body {
+         font-family: Arial, sans-serif;
+         text-align: center;
+      }
+
+      h1 {
+         color: #333;
+         font-size: 24px;
+         margin-top: 20px;
+      }
+
+      .task-input {
+         padding: 8px;
+         font-size: 16px;
+         border: 1px solid #ccc;
+         background-repeat: 4px;
+         width: 300px;
+         margin-top: 10px;
+      }
+
+      .add-button {
+         background-color: #4cAF50;
+         color: #fff;
+         border: none;
+         padding: 10px 20px;
+         font-size: 16px;
+         border-radius: 4px;
+         cursor: pointer;
+         margin-top: 10px;
+      }
+
+      .add-button:hover {
+         background-color: #45a049;
+      }
+
+      .task-list {
+         list-style-type: none;
+         padding: 0;
+         text-align: left;
+         margin-top: 20px;
+      }
+
+      .task-item {
+         display: flex;
+         align-items: center;
+         margin-bottom: 5px;
+      }
+
+      .task-description {
+         flex-grow: 1;
+         margin-right: 10px;
+      }
+
+      .delete-button {
+         background-color: #ff0000;
+         color: #fff;
+         border: none;
+         padding: 5px 10px;
+         cursor: pointer;
+      }
+   </style>
+</head>
+
+<body>
+   <h1>Список дел</h1>
+   <input type="text" class="task-input" placeholder="Добавить задачу">
+   <button class="add-button">Добавить</button>
+   <ul class="task-list"></ul>
+
+</body>
+
+</html>
