@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Task04</title>
+   <style>
+      body {
+         margin: 0;
+         padding: 0;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+         margin: 0;
+         padding: 0;
+      }
+
+      .container {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+      }
+
+      h2 {
+         margin-bottom: 30px;
+      }
+
+      .question {
+         margin-bottom: 20px;
+         background-color: #cde8ba;
+         padding: 5px 20px;
+      }
+
+      .submit-btn {
+         background-color: #ecef9d;
+         border: none;
+         padding: 5px 10px;
+         border-radius: 5px;
+         cursor: pointer;
+         margin-bottom: 20px;
+      }
+
+      .submit-btn:hover {
+         background-color: #f4ec4f;
+      }
+   </style>
+   <script src="./task04.js" defer></script>
+</head>
+
+<body>
+   <div class="container">
+      <h2>Сумеешь лы ты ответить на эти вопросы:</h2>
+      <div class="quiz">
+      </div>
+      <button type="submit" class="submit-btn">Завершить опрос</button>
+      <div class="quiz-result">
+         <h2>Результаты опроса</h2>
+         <p>
+            <span>Вопрос</span>
+            <span>Ваш ответ</span>
+            <span>Правильный ответ</span>
+         </p>
+      </div>
+   </div>
+
+</body>
+
+</html>

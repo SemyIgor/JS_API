@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Task02</title>
+   <style>
+      button {
+         background-color: #4ce9ef;
+         border: none;
+         padding: 5px 20px;
+         border-radius: 3px;
+         cursor: pointer;
+      }
+
+      .open-modal-btn {
+         opacity: 1;
+         transition: opacity 0.2s;
+      }
+
+      .modal-window {
+         background-color: #f0f0f0;
+         opacity: 1;
+         padding: 20px;
+         position: fixed;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         width: 300px;
+         height: 200px;
+         left: 50%;
+         top: 50%;
+         transform: translate(-50%, -50%);
+         transition: opacity 0.6s;
+      }
+
+
+      .hidden {
+         /* display: none; */
+         opacity: 0;
+         /* transform: translate(-100vw, 0); */
+      }
+   </style>
+   <script src="./task02.js" defer></script>
+</head>
+
+<body>
+   <button class="open-modal-btn">Открыть модальное окно</button>
+
+   <div class="modal-window hidden">
+      <h2>Модальное окно</h2>
+      <p>Нажмите кнопку "Закрыть", чтобы закрыть модальное окно</p>
+      <button class="close-modal-btn">Закрыть</button>
+
+   </div>
+
+</body>
+
+</html>

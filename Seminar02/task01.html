@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Task01</title>
+   <style>
+      .header {
+         display: flex;
+         gap: 5px;
+         justify-content: center;
+         list-style: none;
+      }
+
+      .header-item {
+         /* cursor: pointer; */
+         transition: background-color 0.3s;
+      }
+
+      .header-item a {
+         border: grey solid 1px;
+         padding-left: 10px;
+         padding-right: 10px;
+         text-decoration: none;
+      }
+
+      /* Для всех неактивированных элементов при наведении */
+      .header-item:not(.activated):hover {
+         background-color: #f0f0f0;
+      }
+
+      .activated {
+         background-color: rgb(240, 85, 212);
+      }
+   </style>
+   <script src="./task01.js" defer></script>
+</head>
+
+<body>
+   <ul class="header">
+      <li class="header-item"><a href="#">Главная</a></li>
+      <li class="header-item"><a href="#">О нас</a></li>
+      <li class="header-item"><a href="#">Услуги</a></li>
+      <li class="header-item"><a href="#">Контакты</a></li>
+
+      <!-- <li class="header-item">Главная</li>
+      <li class="header-item">О нас</li>
+      <li class="header-item">Услуги</li>
+      <li class="header-item">Контакты</li> -->
+   </ul>
+</body>
+
+</html>
