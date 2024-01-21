@@ -84,6 +84,7 @@ function paginEventActivate(event) {
 
 		// Плавный скроллинг всей тройки картинок вправо, выбранная картинка "выплывает" на экран
 		imagesLineMoveRight();
+		paginationSet[imageIndex].classList.add('pagin-item_current');
 
 		// Выводим картинку во фрейм и "поднимаем" фрейм над "плёнкой"
 		refreshFrame();
@@ -141,9 +142,8 @@ function refreshFrame() {
 
 function moveRight() {
 	imagesLineMoveRight();
-	// clearCurrentPagination();
 	// // Делаем "текущим" элемент пагинации, который соответствует новой картинке
-	// paginationSet[imageIndex].classList.add('pagin-item_current');
+	paginationSet[imageIndexBefore].classList.add('pagin-item_current');
 	// Определяем новые три картинки, которые заместят собой предыдущие
 
 	imageIndex = imageIndex - 1 < 0 ? catsImgs.length - 1 : imageIndex - 1;
@@ -163,8 +163,6 @@ function imagesLineMoveRight() {
 	imagesLine.classList.remove('images-lineinitial');
 
 	clearCurrentPagination();
-	// Делаем "текущим" элемент пагинации, который соответствует новой картинке
-	paginationSet[imageIndexBefore].classList.add('pagin-item_current');
 }
 
 function imagesLineReturnLeft() {
