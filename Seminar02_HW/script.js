@@ -15,16 +15,16 @@
  */
 
 const catsImgs = [
-	'./img/image00.jpg',
-	'./img/image01.jpg',
-	'./img/image02.jpg',
-	'./img/image03.jpg',
-	'./img/image04.jpg',
-	// 'https://masterpiecer-images.s3.yandex.net/f616c1126d3311eea1474659bdca6a39:upscaled',
-	// 'https://masterpiecer-images.s3.yandex.net/e57dcdfa6acc11ee8e2992669a1675b3:upscaled',
-	// 'https://masterpiecer-images.s3.yandex.net/b0dff703878211ee9c683abd0be4d755:upscaled',
-	// 'https://masterpiecer-images.s3.yandex.net/8e120d2a9d9111ee8d617a83974e0feb:upscaled',
-	// 'https://avatars.mds.yandex.net/get-shedevrum/9283310/b133a531b24311eeb2ebd6f07e64960d/orig',
+	// './img/image00.jpg',
+	// './img/image01.jpg',
+	// './img/image02.jpg',
+	// './img/image03.jpg',
+	// './img/image04.jpg',
+	'https://masterpiecer-images.s3.yandex.net/f616c1126d3311eea1474659bdca6a39:upscaled',
+	'https://masterpiecer-images.s3.yandex.net/e57dcdfa6acc11ee8e2992669a1675b3:upscaled',
+	'https://masterpiecer-images.s3.yandex.net/b0dff703878211ee9c683abd0be4d755:upscaled',
+	'https://masterpiecer-images.s3.yandex.net/8e120d2a9d9111ee8d617a83974e0feb:upscaled',
+	'https://avatars.mds.yandex.net/get-shedevrum/9283310/b133a531b24311eeb2ebd6f07e64960d/orig',
 ];
 
 const arrowRight = document.querySelector('.arrow-right path');

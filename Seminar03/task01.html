@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Seminar03 Task01</title>
+   <style>
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      li,
+      ul {
+         padding: 0;
+         margin: 0;
+      }
+
+      h3 {
+         margin-top: 30px;
+      }
+
+      ul {
+         padding-left: 20px;
+      }
+
+      #category-list option:hover {
+         background-color: #d0d0d0;
+      }
+   </style>
+   <script src="./task01.js" defer></script>
+</head>
+
+<body>
+   <h2>Выберите категорию товаров</h2>
+   <form name="goodsListForm" action="#">
+      <h4 name="formHeader">Категория</h4>
+      <select size="3" name="selectGoods" id="category-list" class="category-list" multiple>
+      </select>
+   </form>
+   <h3>Товары:</h3>
+   <ul class="selected-list">
+      <li class="selected-list_Item"></li>
+   </ul>
+</body>
+
+</html>
