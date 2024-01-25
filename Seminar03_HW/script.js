@@ -87,6 +87,17 @@ function renderToDOM(photo) {
 
 		`
 	);
+	const likesBtn = document.querySelector('.likes-btn');
+	console.log('likesBtn: ', likesBtn);
+	likesBtn.addEventListener('click', () => {
+		incrementLikes();
+	});
+}
+
+function incrementLikes() {
+	likes++;
+	const likesCounter = document.querySelector('.likes-counter');
+	likesCounter.textContent = likes;
 }
 
 function likesToStorage() {
@@ -116,9 +127,3 @@ function likesToStorage() {
 
 // Загрузка первой партии фотографий при загрузке страницы
 loadMorePhotos();
-
-const likesBtn = document.querySelector('.likes-div');
-console.log('likesBtn: ', likesBtn);
-likesBtn.addEventListener('click', () => {
-	console.log('clicked');
-});
