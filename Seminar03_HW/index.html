@@ -44,24 +44,40 @@
 
       p {
          padding-left: 10px;
+         margin-bottom: 5px;
       }
 
       .likes-div {
          display: flex;
          justify-content: end;
-         align-items: baseline;
+         align-items: center;
          padding-right: 15px;
          gap: 10px;
+         margin-bottom: 5px;
       }
 
       .likes-btn {
          cursor: pointer;
       }
 
-      .likes-counter {
+      .likes-btn svg g:hover {
+         fill: red;
+      }
+
+      .likes-counter,
+      .photo-id,
+      .totalLikes-counter {
          padding: 0 5px;
          border: 2px solid #b0b0b0;
          border-radius: 2px;
+      }
+
+      .totalLikes-div {
+         display: flex;
+         justify-content: end;
+         align-items: center;
+         padding-right: 15px;
+         gap: 10px;
       }
    </style>
    <script src="./script.js" defer></script>
