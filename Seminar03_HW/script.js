@@ -87,6 +87,7 @@ function renderToDOM(photo) {
 
 		`
 	);
+
 	const likesBtn = document.querySelector('.likes-btn');
 	console.log('likesBtn: ', likesBtn);
 	likesBtn.addEventListener('click', () => {
